@@ -1,0 +1,198 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 12px;
+    font-family: Arial, "Times New Roman", Times, serif;
+    background: url(../../imgs/body-bg.png) repeat top;
+}
+
+#page {
+    width: 942px;
+    margin: 0 auto;
+    border: 1px solid #999;
+}
+
+#menung1 {
+    width: 100%;
+    height: 50px;
+    line-height: 35px;
+    color: #FFF;
+    /*background: url(../images/nav-bg.gif);*/
+    /*border-top: 5px solid #F66D05;*/
+}
+
+#menung1 ul {
+    font-size: 14px;
+    font-weight: bold;
+    list-style: none;
+}
+
+#menung1 ul li { /*hiển thị theo hàng*/
+    float: left;
+    padding-right: 10px;
+}
+
+#menung1 ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 5px;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+#menung1 ul li a:hover {
+    background-color: red;
+}
+
+
+#circle {
+    background: url(../../imgs/cart.png.pagespeed.ce.jLDnCD-MFM.png) no-repeat left;
+    color: #fede2d;
+    font-size: 20px;
+    line-height: 25px;
+    text-decoration: none;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    overflow: hidden;
+    padding: 11px 0 0;
+    display: block;
+    float: right;
+    font-weight: 700;
+    margin-right: 15px;
+    margin-left: 5px;
+}
+
+#menung3 {
+    width: 960px;
+    height: 54px;
+    line-height: 35px;
+    color: #FFF;
+    /*background: url(../images/nav-bg.gif);*/
+    /*border-top: 5px solid #F66D05;*/
+}
+
+#menuMain {
+    font-size: 14px;
+    font-weight: bold;
+    list-style: none;
+    width: 100%;
+}
+
+#menuMain > li {
+    float: left;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-left: 5px;
+    position: relative;
+}
+
+#menuMain > li > a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 5px;
+    cursor: pointer;
+    transition: .2s;
+    text-transform: uppercase;
+    background: url(../../imgs/cat-line.png.pagespeed.ce.xK-I2ckRcy.png) no-repeat left top;
+}
+
+#menuMain > li a:hover {
+    color: yellow;
+}
+
+#menuMain {
+    background: url(../../imgs/hor-cat.png.pagespeed.ce.KqTNhc4gBA.png) no-repeat center top;
+    height: 54px;
+    border-radius: 5px;
+    width: 940px;
+}
+
+
+
+#submenu {
+    display: none;
+    position: absolute;
+    background: url(../../imgs/level2-bottom.png) repeat center bottom;
+    border-radius: 4px;
+    top: 100%;
+    left: 20%;
+    transition: ease-in 1s;
+    width: 150px;
+    line-height: 20px;
+}
+
+#menuMain > li:hover #submenu {
+    display: block;
+}
+
+#submenu li a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+#submenu li {
+    padding: 0 10px;
+    list-style: none;
+}
+
+#footer {
+    overflow: hidden;
+    background-color: #904c02;
+    margin-top: 250px;
+}
+
+#content {
+    margin-top: 30px;
+}
+
+
+#menung4 {
+    width: 940px;
+    height: 35px;
+    line-height: 35px;
+    color: #FFF;
+    padding: 20px 0px;
+    /*background: url(../images/nav-bg.gif);*/
+    /*border-top: 5px solid #F66D05;*/
+}
+
+#menung4 ul {
+    font-size: 14px;
+    list-style: none;
+}
+
+#menung4 ul li { /*hiển thị theo hàng*/
+    float: left;
+    padding-right: 10px;
+}
+
+#menung4 ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 5px;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+#menung4 ul li a:hover {
+    color: orange;
+}
+
+#disFooter {
+    color: #fff;
+    text-align: center;
+}

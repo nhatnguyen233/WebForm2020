@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="frontEnd.master.cs" Inherits="QuaVat.frontEnd" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="Assets/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/css/owl-carousel.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet/less" type="text/css" href="Assets/css/style.less" />
+
+    <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="page">
+
+            <div id="header">
+                <div id="menung1">
+                    <ul>
+                        <li><a href="#"><span>Trang chủ</span></a> </li>
+                        <li><a href="#"><span>Giới thiệu</span></a></li>
+                        <li><a href="#"><span>Tất cả món ăn</span></a></li>
+                        <li><a href="#"><span>Tin tức</span></a></li>
+                        <li><a href="#"><span>Chính sách</span></a></li>
+                        <li><a href="#"><span>Bản đồ</span></a></li>
+                    </ul>
+                </div>
+
+                <div id="menung2">
+                    <div class="input-search">
+                        <input type="text" class="inp" />
+                        <input type="image" class="search" src="/imgs/search.png"  />
+                    </div>
+                    <input type="image" src="/imgs/logo1545122923_s87.png" />
+                    <div class="cart-number">
+                        <span>Giỏ Hàng</span>
+                        <a href="#" id="circle">0</a>
+                    </div>
+                </div>
+
+                <div id="menung3">
+                    <ul id="menuMain">
+                        <li><a href="#" id="catline" style="background: none;"><span>Món ăn vặt</span></a> 
+                            <ul id="submenu">
+                                <li style="padding-top: 10px;"><a href="#"><span>Món rán</span></a> </li>
+                                <li><a href="#"><span>Món nướng</span></a></li>
+                                <li><a href="#"><span>Món cuốn</span></a></li>
+                                <li><a href="#"><span>Các món nộm</span></a></li>
+                                <li style="padding-bottom: 10px;"><a href="#"><span>Các món khác</span></a></li>                                
+                            </ul>
+                        </li>
+                        <li><a href="#"><span>Chè</span></a></li>
+                        <li><a href="#"><span>Sữa chua</span></a></li>
+                        <li><a href="#"><span>Sinh tố</span></a></li>
+                        <li><a href="#"><span>Nước ép</span></a></li>
+                        <li><a href="#"><span>Hoa quả dầm</span></a></li>
+                        <li><a href="#"><span>Hoa quả quả tươi</span></a></li>
+                        <li><a href="#"><span>Thực phẩm tươi sống</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p>
+                        <br />
+                    </p>
+                    <p>
+                        &nbsp;</p>
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="footer">
+            <div id="menung4">
+                <ul>
+                    <li><a href="#"><span>Trang chủ</span></a> </li>
+                    <li><a href="#"><span>Món ăn mới</span></a> </li>
+                    <li><a href="#"><span>Món ăn đặc biệt</span></a></li>
+                    <li><a href="#"><span>Giới thiệu</span></a></li>
+                    <li><a href="#"><span>Tin tức</span></a></li>
+                    <li><a href="#"><span>Chính sách</span></a></li>
+                    <li><a href="#"><span>Bản đồ</span></a></li>
+                    <li><a href="#"><span>Liên hệ</span></a></li>
+                    <li><a href="#"><span>Phí giao hàng</span></a></li>
+                </ul>
+            </div>
+            <div id="disFooter">
+                Số ĐKKD 01E8024878
+    UBND Q. Đống Đa cấp ngày 15/11/2017<br />
+    Người đại diện: Đỗ Công Bắc<br />
+    Số 50, Ngõ 121 Chùa Láng, Đống Đa, Hà Nội<br />
+    Email: kinhdoanh@quavatviet.vn / info@quavatviet.vn<br />
+    Website: www.quavatviet.com / www.quavatviet.vn<br />
+    Facebook: www.facebook.com/quavatviet<br />
+    Điện thoại: 1900.0090<br />
+                <input style="width: 250px;" type="image" src="/imgs/da-thong-bao-bo-cong-thuong.png.pagespeed.ce.BadbvNSFW5.png" />
+            </div>
+        </div>
+        </div>  
+        
+    </form>
+</body>
+ <script src="/Assets/js/owl-carousel.js" ></script>
+</html>
