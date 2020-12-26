@@ -4,10 +4,7 @@
 
 <html>
 <head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-
+    <title>Quà vặt việt</title>
     <link href="Assets/css/custom.css" rel="stylesheet" type="text/css" />
     <link href="Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="Assets/css/owl-carousel.css" rel="stylesheet" type="text/css" />
@@ -25,7 +22,7 @@
             <div id="header">
                 <div id="menung1">
                     <ul>
-                        <li><a href="#"><span>Trang chủ</span></a> </li>
+                        <li><a href="/Views/Home.aspx"><span>Trang chủ</span></a> </li>
                         <li><a href="#"><span>Giới thiệu</span></a></li>
                         <li><a href="#"><span>Tất cả món ăn</span></a></li>
                         <li><a href="#"><span>Tin tức</span></a></li>
@@ -69,18 +66,14 @@
             </div>
 
             <div id="content">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    <p>
-                        <br />
-                    </p>
-                    <p>
-                        &nbsp;</p>
+                <asp:ContentPlaceHolder ID="main_body" runat="server">
+                   
                 </asp:ContentPlaceHolder>
             </div>
             <div id="footer">
             <div id="menung4">
                 <ul>
-                    <li><a href="#"><span>Trang chủ</span></a> </li>
+                    <li><a href="/Views/Home.aspx"><span>Trang chủ</span></a> </li>
                     <li><a href="#"><span>Món ăn mới</span></a> </li>
                     <li><a href="#"><span>Món ăn đặc biệt</span></a></li>
                     <li><a href="#"><span>Giới thiệu</span></a></li>

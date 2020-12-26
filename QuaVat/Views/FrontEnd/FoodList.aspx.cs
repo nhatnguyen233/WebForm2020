@@ -6,15 +6,16 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using QuaVat.BUS;
 
-namespace QuaVat.Views
+namespace QuaVat.Views.FrontEnd
 {
-    public partial class Home : System.Web.UI.Page
+    public partial class FoodList : System.Web.UI.Page
     {
-        FoodBUS food = new FoodBUS();
+        FoodBUS bus = new FoodBUS();
+
         public void HienThi()
         {
-            list1.DataSource = food.ShowAllFood();
-            list1.DataBind();
+            list.DataSource = bus.ShowAllFood();
+            list.DataBind();
         }
 
         protected void Page_Load(object sender, EventArgs e)

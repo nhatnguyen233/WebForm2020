@@ -7,20 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuaVat.Views
+namespace QuaVat.Views.FrontEnd
 {
 
 
-    public partial class Home
+    public partial class FoodList
     {
 
         /// <summary>
-        /// list1 control.
+        /// list control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater list1;
+        protected global::System.Web.UI.WebControls.Repeater list;
     }
 }
