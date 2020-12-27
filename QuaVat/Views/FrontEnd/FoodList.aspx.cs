@@ -6,17 +6,19 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using QuaVat.BUS;
 
-namespace QuaVat
+namespace QuaVat.Views.FrontEnd
 {
-    public partial class frontEnd : System.Web.UI.MasterPage
+    public partial class FoodList : System.Web.UI.Page
     {
-        CategoryBUS category = new CategoryBUS();
+        FoodBUS bus = new FoodBUS();
 
         public void HienThi()
         {
-            categoryMain.DataSource = category.ShowMainCategory();
-            categoryMain.DataBind();
+            int cat_id = Int32.Parse(Request.QueryString["cat_id"].ToString());
+            list.DataSource = bus.ShowFoodWithCategory(cat_id);
+            list.DataBind();
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             HienThi();

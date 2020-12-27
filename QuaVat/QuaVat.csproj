@@ -88,10 +88,16 @@
     <Content Include="imgs\logo1545122923_s87.png" />
     <Content Include="imgs\product-bg.png" />
     <Content Include="imgs\search.png" />
+    <Content Include="Views\FrontEnd\FoodList.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CategoryBUS.cs" />
+    <Compile Include="BUS\FoodBUS.cs" />
+    <Compile Include="DAL\Data.cs" />
+    <Compile Include="DTO\CategoryDTO.cs" />
+    <Compile Include="DTO\FoodDTO.cs" />
     <Compile Include="frontEnd.Master.cs">
       <DependentUpon>frontEnd.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -100,6 +106,13 @@
       <DependentUpon>frontEnd.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FrontEnd\FoodList.aspx.cs">
+      <DependentUpon>FoodList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\FrontEnd\FoodList.aspx.designer.cs">
+      <DependentUpon>FoodList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
