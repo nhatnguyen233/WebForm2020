@@ -14,7 +14,8 @@ namespace QuaVat.Views.FrontEnd
 
         public void HienThi()
         {
-            list.DataSource = bus.ShowAllFood();
+            int cat_id = Int32.Parse(Request.QueryString["cat_id"].ToString());
+            list.DataSource = bus.ShowFoodWithCategory(cat_id);
             list.DataBind();
         }
 

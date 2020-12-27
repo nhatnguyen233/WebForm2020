@@ -15,6 +15,10 @@ namespace QuaVat.Views
         {
             list1.DataSource = food.ShowAllFood();
             list1.DataBind();
+            list2.DataSource = food.ShowFoodTop4WithCategory(1);
+            list2.DataBind();
+            list3.DataSource = food.ShowFoodTop4WithCategory(2);
+            list3.DataBind();
         }
 
         protected void Page_Load(object sender, EventArgs e)

@@ -22,7 +22,15 @@ namespace QuaVat.BUS
 
         public DataTable ShowFoodWithCategory(int category_id)
         {
-            string sql = "select * from foods where category_id = " + category_id;
+            string sql = "select * from foods inner join categories on foods.category_id = categories.category_id or foods.category_id = categories.parent_id where foods.category_id=" + category_id + " or categories.parent_id=" + category_id;
+            DataTable dt = new DataTable();
+            dt = data.GetTable(sql);
+            return dt;
+        }
+
+        public DataTable ShowFoodTop4WithCategory(int category_id)
+        {
+            string sql = "select top 4 * from foods inner join categories on foods.category_id = categories.category_id or foods.category_id = categories.parent_id where foods.category_id=" + category_id + " or categories.parent_id=" + category_id;
             DataTable dt = new DataTable();
             dt = data.GetTable(sql);
             return dt;

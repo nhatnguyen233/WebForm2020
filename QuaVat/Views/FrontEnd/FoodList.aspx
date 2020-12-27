@@ -1,5 +1,43 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frontEnd.Master" AutoEventWireup="true" CodeBehind="FoodList.aspx.cs" Inherits="QuaVat.Views.FrontEnd.FoodList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="main_body" runat="server">
+    <style>
+        .food-name--item {
+            font-size: 17px;
+            text-decoration: none;
+            line-height: 20px;
+            font-weight: normal;
+            font-family: 'Oswald',sans-serif;
+            color: #eb8806;
+            outline: none;
+        }
+
+        .price-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            line-height: 35px;
+        }
+
+        .price-column .amount-item {
+            color: #e4241d;
+            line-height: 25px;
+            font-family: 'Oswald',sans-serif;
+        }
+
+        .price-column .button-buy {
+            width: 85px;
+            height: auto;
+            background-color: #EB0404;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #main_body_list_CheckBuy_0 {
+            margin-left: 3px;
+        }
+    </style>
     <div class="row data-food-list">
         <div class="data-list col-md-9">
             <asp:Repeater ID="list" runat="server" >
@@ -8,8 +46,8 @@
                         <table class="table table-head-custom table-vertical-center" id="kt_advance_table_widget_4">
                             <thead>
                             <tr class="text-left">
-                                <th>Hình ảnh</th>
-                                <th>Tên</th>
+                                <th style="width: 30%">Hình ảnh</th>
+                                <th style="width: 50%">Tên</th>
                                 <th>Giá</th>
                             </tr>
                             </thead>
@@ -18,19 +56,26 @@
                 <ItemTemplate>
                     <tr>
                         <td>
-                            <img src=" <%# Eval("image") %>" alt="<%# Eval("food_name") %>" title="<%# Eval("food_name") %>" width="100%" />
+                            <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>">
+                                <img src=" <%# Eval("image") %>" alt="<%# Eval("food_name") %>" title="<%# Eval("food_name") %>" width="100%" />
+                            </a>
                         </td>
                         <td>
-                            <div><%# Eval("food_name") %></div>
-                            <div><%# Eval("description") %></div>
+                            <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" class="food-name--item">
+                                <%# Eval("food_name") %>
+                            </a>
+                            <br />
+                            <div style="text-align: justify"><%# Eval("description") %></div>
                         </td>
                         <td>
-                            <div><%# String.Format("{0:#}",Eval("amount")) %> đ</div>
-                            <div>
-                                <asp:CheckBox ID="CheckBuy" runat="server" TextAlign="Left" Text="Chọn mua" />
-                            </div>
-                            <div>
-                                <asp:Button ID="Button1" runat="server" Text="Button" />
+                            <div class="price-column">
+                                <div class="amount-item"><%# String.Format("{0:#}",Eval("amount")) %> đ</div>
+                                <div>
+                                    <asp:CheckBox ID="CheckBuy" runat="server" TextAlign="Left" Text="Chọn mua: " />
+                                </div>
+                                <div>
+                                    <asp:Button ID="Button1" runat="server" Text="Mua hàng"  class="button-buy"/>
+                                </div>
                             </div>
                         </td>
                     </tr>

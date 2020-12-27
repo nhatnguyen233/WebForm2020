@@ -45,7 +45,7 @@
 
                 <div id="menung3">
                     <ul id="menuMain">
-                        <li><a href="#" id="catline" style="background: none;"><span>Món ăn vặt</span></a> 
+                        <li><a href="/Views/FrontEnd/FoodList.aspx?cat_id=1" id="catline" style="background: none;"><span>Món ăn vặt</span></a> 
                             <ul id="submenu">
                                 <li style="padding-top: 10px;"><a href="#"><span>Món rán</span></a> </li>
                                 <li><a href="#"><span>Món nướng</span></a></li>
@@ -54,13 +54,15 @@
                                 <li style="padding-bottom: 10px;"><a href="#"><span>Các món khác</span></a></li>                                
                             </ul>
                         </li>
-                        <li><a href="#"><span>Chè</span></a></li>
-                        <li><a href="#"><span>Sữa chua</span></a></li>
-                        <li><a href="#"><span>Sinh tố</span></a></li>
-                        <li><a href="#"><span>Nước ép</span></a></li>
-                        <li><a href="#"><span>Hoa quả dầm</span></a></li>
-                        <li><a href="#"><span>Hoa quả quả tươi</span></a></li>
-                        <li><a href="#"><span>Thực phẩm tươi sống</span></a></li>
+                        <asp:Repeater ID="categoryMain" runat="server">
+                        <ItemTemplate>
+                            <li>
+                                <a href="<%# "/Views/FrontEnd/FoodList.aspx?cat_id=" + Eval("category_id").ToString() %>">
+                                <span><%# Eval("category_name") %></span>
+                                </a>
+                            </li>
+                        </ItemTemplate>
+                        </asp:Repeater>
                     </ul>
                 </div>
             </div>
