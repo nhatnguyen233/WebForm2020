@@ -11,7 +11,10 @@ namespace QuaVat.Views.BackEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["Admin"].Equals(""))
+            {
+                Response.Redirect("/Views/BackEnd/Login.aspx");
+            } 
         }
     }
 }

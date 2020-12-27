@@ -11,18 +11,16 @@
     <form id="form1" runat="server">
         <div class="container">
 			<section id="content">
-				<form action="" method="post">
-					<h1>Admin Login</h1>
-					<div>
-						<input type="text" placeholder="Username" required="" name="username" />
-					</div>
-					<div>
-						<input type="password" placeholder="Password" required="" name="password" />
-					</div>
-					<div>
-						<input type="submit" value="Log in" />
-					</div>
-				</form><!-- form -->
+				<h1>Admin Login</h1>
+				<div>
+                    <asp:TextBox ID="Account" runat="server" placeholder="Enter account"></asp:TextBox>
+				</div>
+				<div>
+                    <asp:TextBox ID="Password" runat="server" TextMode="Password" placeholder="Enter password"></asp:TextBox>
+				</div>
+				<div>
+                    <asp:Button ID="LogIn" runat="server" Text="Log In" PostBackUrl="~/Views/BackEnd/Login.aspx" OnClick="LogIn_Click"/>
+				</div>
 				<div class="button">
 					<a href="#">Training with live project</a>
 				</div><!-- button -->
