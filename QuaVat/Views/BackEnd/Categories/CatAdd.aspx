@@ -17,7 +17,7 @@
                     <label>Parent Category: &nbsp;</label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="ParentID" runat="server" name="ParentID" DataSourceID="SqlDataSource1" DataTextField="category_name" DataValueField="category_id">
+                    <asp:DropDownList ID="ParentID" runat="server" name="ParentID">
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -31,6 +31,7 @@
             </tr>
             <tr>
                 <th colspan="2">
+                    <asp:Button ID="Back" runat="server" Text="Back" />
                     <asp:Button ID="Save" runat="server" Text="Save" PostBackUrl="~/Views/BackEnd/Categories/CatAdd.aspx" OnClick="Save_Click"/>
                 </th>
             </tr>
@@ -38,14 +39,20 @@
     </div>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="script" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="style" runat="server">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" type="text/css"/>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
      <!-- Load TinyMCE -->
-    <script src="https://cdn.tiny.cloud/1/snb2ihsmx7u8rowe7d4wve91u3h2zsudw988vzymn1m2yfs3/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/snb2ihsmx7u8rowe7d4wve91u3h2zsudw988vzymn1m2yfs3/tinymce/5/tinymce.min.js" type="text/javascript"></script>
     <script>
         tinymce.init({
             selector: '.tinymce'
         });
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             setupTinyMCE();

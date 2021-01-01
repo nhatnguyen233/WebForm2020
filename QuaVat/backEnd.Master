@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="/Assets/admin/css/layout.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/Assets/admin/css/nav.css" media="screen" />
     <link href="/Assets/admin/css/table/demo_page.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="style" runat="server">
+    </asp:ContentPlaceHolder>     
     <!-- BEGIN: load jquery -->
     <script src="/Assets/admin/js/jquery-1.6.4.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="/Assets/admin/js/jquery-ui/jquery.ui.core.min.js"></script>
