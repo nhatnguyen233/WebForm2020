@@ -11,7 +11,7 @@ namespace QuaVat.Views.BackEnd.Categories
 {
 
 
-    public partial class CatAdd
+    public partial class CatEdit
     {
 
         /// <summary>
@@ -42,13 +42,13 @@ namespace QuaVat.Views.BackEnd.Categories
         protected global::System.Web.UI.WebControls.DropDownList ParentID;
 
         /// <summary>
-        /// Description control.
+        /// Desc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Description;
+        protected global::System.Web.UI.WebControls.TextBox Desc;
 
         /// <summary>
         /// Back control.

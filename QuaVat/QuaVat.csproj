@@ -585,6 +585,8 @@
     <Content Include="imgs\product-bg.png" />
     <Content Include="imgs\search.png" />
     <Content Include="Views\BackEnd\Categories\CatAdd.aspx" />
+    <Content Include="Views\BackEnd\Categories\CatDelete.aspx" />
+    <Content Include="Views\BackEnd\Categories\CatEdit.aspx" />
     <Content Include="Views\BackEnd\Categories\CatList.aspx" />
     <Content Include="Views\BackEnd\DashBoard.aspx" />
     <Content Include="Views\BackEnd\Foods\FoodAdd.aspx" />
@@ -629,6 +631,20 @@
     </Compile>
     <Compile Include="Views\BackEnd\Categories\CatAdd.aspx.designer.cs">
       <DependentUpon>CatAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\Categories\CatDelete.aspx.cs">
+      <DependentUpon>CatDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\Categories\CatDelete.aspx.designer.cs">
+      <DependentUpon>CatDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\Categories\CatEdit.aspx.cs">
+      <DependentUpon>CatEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\Categories\CatEdit.aspx.designer.cs">
+      <DependentUpon>CatEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\BackEnd\Categories\CatList.aspx.cs">
       <DependentUpon>CatList.aspx</DependentUpon>

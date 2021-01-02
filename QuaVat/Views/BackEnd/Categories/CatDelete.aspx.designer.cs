@@ -11,16 +11,16 @@ namespace QuaVat.Views.BackEnd.Categories
 {
 
 
-    public partial class CatList
+    public partial class CatDelete
     {
 
         /// <summary>
-        /// list control.
+        /// Back control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater list;
+        protected global::System.Web.UI.WebControls.Button Back;
     }
 }

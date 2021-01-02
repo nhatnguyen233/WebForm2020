@@ -12,9 +12,25 @@ namespace QuaVat.BUS
     {
         Data data = new Data();
 
-        public DataTable ShowAll()
+        public DataTable GetList(int offset = 0, int perpage = 10)
         {
-            string sql = "select * from categories";
+            string sql = "SELECT * FROM categories ORDER BY category_id OFFSET " + offset + " ROWS FETCH NEXT "+ perpage+ " ROWS ONLY";
+            DataTable dt = new DataTable();
+            dt = data.GetTable(sql);
+            return dt;
+        }
+
+        public DataTable GetAll()
+        {
+            string sql = "SELECT * FROM categories";
+            DataTable dt = new DataTable();
+            dt = data.GetTable(sql);
+            return dt;
+        }
+
+        public DataTable GetWithID(int category_id)
+        {
+            string sql = "SELECT * FROM categories WHERE category_id=" + category_id;
             DataTable dt = new DataTable();
             dt = data.GetTable(sql);
             return dt;
@@ -34,6 +50,24 @@ namespace QuaVat.BUS
             DataTable dt = new DataTable();
             dt = data.GetTable(sql);
             return dt;
+        }
+
+        public void Insert(string category_name = null, string description ="", int parent_id = 0)
+        {
+            string sql = "INSERT INTO categories(category_name,description,parent_id) VALUES(N'" + category_name + "',N'" + description + "','" + parent_id + "')";
+            data.ExecuteNonQuery(sql);
+        }
+
+        public void Update(string category_name = null, string description = "", int parent_id = 0, int category_id = 0)
+        {
+            string sql = "UPDATE categories SET category_name = N'" + category_name + "', description = N'"+ description + "', parent_id = '"+ parent_id + "' where category_id = '" + category_id + "'";
+            data.ExecuteNonQuery(sql);
+        }
+
+        public void Delete(int category_id)
+        {
+            string sql = "DELETE categories WHERE category_id = '" + category_id + "'";
+            data.ExecuteNonQuery(sql);
         }
     }
 }
