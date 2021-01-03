@@ -23,8 +23,9 @@ namespace QuaVat.Views.BackEnd
 
         protected void LogIn_Click(object sender, EventArgs e)
         {
-            string account = Request.Form.Get("Account");
-            string password = Request.Form.Get("Password");
+            string account = Account.Text.Trim();
+            string password = Password.Text.Trim();
+            
             if (admin.CheckLogin(account, password) == true)
             {
                 Session["Admin"] = account;
@@ -32,7 +33,7 @@ namespace QuaVat.Views.BackEnd
             }
             else
             {
-                Response.Write("Something Wrong!");
+                Response.Write("<script>alert('Something Wrong!')</script>");
             }
         }
     }

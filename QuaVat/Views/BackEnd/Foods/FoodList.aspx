@@ -5,58 +5,52 @@
 		<table class="data display datatable" id="example">
 			<thead>
 				<tr>
-					<th>Post Title</th>
+					<th>No</th>
+					<th>Name</th>
 					<th>Description</th>
-					<th>Category</th>
+					<th>Amount</th>
+					<th>Quantity</th>
 					<th>Image</th>
+					<th>Category</th>
 					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr class="odd gradeX">
-					<td>Trident</td>
-					<td>Internet Explorer 4.0</td>
-					<td>Win 95+</td>
-					<td class="center"> 4</td>
-					<td><a href="">Edit</a> || <a href="">Delete</a></td>
-				</tr>
-				<tr class="even gradeC">
-					<td>Trident</td>
-					<td>Internet Explorer 5.0</td>
-					<td>Win 95+</td>
-					<td class="center">5</td>
-					<td><a href="">Edit</a> || <a href="">Delete</a></td>
-				</tr>
-				<tr class="odd gradeA">
-					<td>Trident</td>
-					<td>Internet Explorer 5.5</td>
-					<td>Win 95+</td>
-					<td class="center">5.5</td>
-					<td><a href="">Edit</a> || <a href="">Delete</a></td>
-				</tr>
-				<tr class="even gradeA">
-					<td>Trident</td>
-					<td>Internet Explorer 6</td>
-					<td>Win 98+</td>
-					<td class="center">6</td>
-					<td><a href="">Edit</a> || <a href="">Delete</a></td>
-				</tr>
-				<tr class="odd gradeA">
-					<td>Trident</td>
-					<td>Internet Explorer 7</td>
-					<td>Win XP SP2+</td>
-					<td class="center">7</td>
-					<td><a href="">Edit</a> || <a href="">Delete</a></td>
-				</tr>
-				<tr class="even gradeA">
-					<td>Trident</td>
-					<td>AOL browser (AOL desktop)</td>
-					<td>Win XP</td>
-					<td class="center">6</td>
-					<td><a href="">Edit</a> || <a href="">Delete</a></td>
-				</tr>
+				<% offset += 1; %>
+                <asp:Repeater ID="list" runat="server">
+					<ItemTemplate>
+					<tr class="odd gradeX">
+						<td><%= offset++ %></td>
+						<td>
+							<%# Eval("food_name") %>
+							<br />
+							(Discount: <%# (Eval("discount") == null) ? "0 %" : Eval("discount") %>%)
+						</td>
+						<td style="width: 15%; text-align:justify; padding-left: 0px !important;">
+							<%# Eval("description").ToString().Take(80).Aggregate("", (x,y) => x + y) %>...
+						</td>
+						<td><%# String.Format("{0:#}",Eval("amount")) %>đ</td>
+						<td><%# Eval("quantity") %></td>
+						<th style="width:10%">
+							<br />
+							<img src="<%# Eval("image") %>" width="100"/>
+						</th>
+						<td style="width:10%;"><%# Eval("category_name") %></td>
+						<td><a href="FoodEdit.aspx?food_id=<%# Eval("food_id") %>">Edit</a> || <a href="FoodDelete.aspx?food_id=<%# Eval("food_id") %>">Delete</a></td>
+					</tr>
+					</ItemTemplate>
+				</asp:Repeater>
 			</tbody>
 		</table>
+		<div class="pagination" style="
+				margin-top: 1em;
+				float: right;
+				margin-right: 5%;
+			">
+			<% for (int i=1; i<=totalPages; i++) {%>
+				<a class="btn btn-small" href="?page=<%= i %>&per_page=10"><%= i %></a>
+			<% } %>
+		</div>
 	</div>
 </asp:Content>
 

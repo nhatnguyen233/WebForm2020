@@ -25,9 +25,12 @@ namespace QuaVat.BUS
             string sql = "select * from admins where account_name='" + account + "' AND password='" + password + "'";
             DataTable dt = new DataTable();
             dt = data.GetTable(sql);
-            if(dt != null)
+            foreach(DataRow dr in dt.Rows)
             {
-                return true;
+                if(dr != null)
+                {
+                    return true;
+                }
             }
             return false;
         }

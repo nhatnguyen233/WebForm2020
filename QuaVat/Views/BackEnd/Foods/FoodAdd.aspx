@@ -1,16 +1,20 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/backEnd.Master" AutoEventWireup="true" CodeBehind="FoodAdd.aspx.cs" Inherits="QuaVat.Views.BackEnd.Foods.FoodAdd" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/backEnd.Master" AutoEventWireup="true" CodeBehind="FoodAdd.aspx.cs" Inherits="QuaVat.Views.BackEnd.Foods.FoodAdd" ValidateRequest="false" %>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="style" runat="server">
+    <!-- Load Toastr Alert CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet" type="text/css"/>
+</asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="main_body" runat="server">
     <h2>Add New Food</h2>
     <div class="block">               
-        <form action="" method="post" enctype="multipart/form-data">
         <table class="form">    
             <tr>
                 <td>
                     <label>Name</label>
                 </td>
                 <td>
-                    <input type="text" placeholder="Enter Product Name..." class="medium" />
+                    <asp:TextBox ID="FoodName" runat="server" class="medium" placeholder="Enter Food Name..."></asp:TextBox>
                 </td>
             </tr>
 		    <tr>
@@ -18,25 +22,16 @@
                     <label>Category</label>
                 </td>
                 <td>
-                    <select id="select" name="select">
-                        <option>Select Category</option>
-                        <option value="1">Category One</option>
-                        <option value="2">Category Two</option>
-                        <option value="3">Category Three</option>
-                    </select>
+                    <asp:DropDownList ID="CatList" runat="server" DataSourceID="SqlDataSource1" DataTextField="category_name" DataValueField="category_id"></asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuaVatVietConnectionString %>" SelectCommand="SELECT [category_id], [category_name] FROM [categories]"></asp:SqlDataSource>
                 </td>
             </tr>
-		    <tr>
+            <tr>
                 <td>
-                    <label>Brand</label>
+                    <label>Quantity</label>
                 </td>
                 <td>
-                    <select id="select" name="select">
-                        <option>Select Brand</option>
-                        <option value="1">Brand One</option>
-                        <option value="2">Brand Two</option>
-                        <option value="3">Brand Three</option>
-                    </select>
+                    <asp:TextBox ID="Quantity" runat="server" class="small" TextMode="Number"></asp:TextBox>
                 </td>
             </tr>
 		    <tr>
@@ -44,54 +39,49 @@
                     <label>Description</label>
                 </td>
                 <td>
-                    <textarea class="tinymce"></textarea>
+                    <asp:TextBox ID="Description" class="tinymce" runat="server" TextMode="multiline" Columns="50" Rows="5"></asp:TextBox>
                 </td>
             </tr>
 		    <tr>
                 <td>
-                    <label>Price</label>
+                    <label>Amount</label>
                 </td>
                 <td>
-                    <input type="text" placeholder="Enter Price..." class="medium" />
+                    <asp:TextBox ID="Amount" runat="server" placeholder="Enter Amount" class="small"></asp:TextBox>
                 </td>
             </tr>
-            
+             <tr>
+                <td>
+                    <label>Discount</label>
+                </td>
+                <td>
+                    <asp:TextBox ID="Discount" runat="server" placeholder="Enter Discount" class="small"></asp:TextBox>
+                </td>
+            </tr>
             <tr>
                 <td>
                     <label>Upload Image</label>
                 </td>
                 <td>
-                    <input type="file" />
+                    <asp:FileUpload ID="Img" runat="server" />
                 </td>
             </tr>
-				
-		    <tr>
-                <td>
-                    <label>Product Type</label>
-                </td>
-                <td>
-                    <select id="select" name="select">
-                        <option>Select Type</option>
-                        <option value="1">Featured</option>
-                        <option value="2">Non-Featured</option>
-                    </select>
-                </td>
-            </tr>
-
 		    <tr>
                 <td></td>
                 <td>
-                    <input type="submit" name="submit" Value="Save" />
+                    <asp:Button ID="Cancel" runat="server" Text="Cancel" />
+                    <asp:Button ID="Save" runat="server" Text="Save" PostBackUrl="~/Views/BackEnd/Foods/FoodAdd.aspx" OnClick="Save_Click"/>
                 </td>
             </tr>
         </table>
-        </form>
     </div>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="script" runat="server">
+    <!-- Load Toastr Alert JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript"></script>
     <!-- Load TinyMCE -->
-    <script src="https://cdn.tiny.cloud/1/snb2ihsmx7u8rowe7d4wve91u3h2zsudw988vzymn1m2yfs3/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/snb2ihsmx7u8rowe7d4wve91u3h2zsudw988vzymn1m2yfs3/tinymce/5/tinymce.min.js" type="text/javascript"></script>
     <script>
         tinymce.init({
             selector: '.tinymce'

@@ -11,7 +11,7 @@ namespace QuaVat.Views.BackEnd.Foods
 {
 
 
-    public partial class FoodAdd
+    public partial class FoodEdit
     {
 
         /// <summary>
@@ -42,40 +42,40 @@ namespace QuaVat.Views.BackEnd.Foods
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// Quantity control.
+        /// Qty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Quantity;
+        protected global::System.Web.UI.WebControls.TextBox Qty;
 
         /// <summary>
-        /// Description control.
+        /// Desc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Description;
+        protected global::System.Web.UI.WebControls.TextBox Desc;
 
         /// <summary>
-        /// Amount control.
+        /// AmountID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Amount;
+        protected global::System.Web.UI.WebControls.TextBox AmountID;
 
         /// <summary>
-        /// Discount control.
+        /// DiscountID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Discount;
+        protected global::System.Web.UI.WebControls.TextBox DiscountID;
 
         /// <summary>
         /// Img control.

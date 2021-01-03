@@ -590,6 +590,8 @@
     <Content Include="Views\BackEnd\Categories\CatList.aspx" />
     <Content Include="Views\BackEnd\DashBoard.aspx" />
     <Content Include="Views\BackEnd\Foods\FoodAdd.aspx" />
+    <Content Include="Views\BackEnd\Foods\FoodDelete.aspx" />
+    <Content Include="Views\BackEnd\Foods\FoodEdit.aspx" />
     <Content Include="Views\BackEnd\Foods\FoodList.aspx" />
     <Content Include="Views\BackEnd\Login.aspx" />
     <Content Include="Views\BackEnd\Sliders\SliderAdd.aspx" />
@@ -666,6 +668,20 @@
     </Compile>
     <Compile Include="Views\BackEnd\Foods\FoodAdd.aspx.designer.cs">
       <DependentUpon>FoodAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\Foods\FoodDelete.aspx.cs">
+      <DependentUpon>FoodDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\Foods\FoodDelete.aspx.designer.cs">
+      <DependentUpon>FoodDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\Foods\FoodEdit.aspx.cs">
+      <DependentUpon>FoodEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\Foods\FoodEdit.aspx.designer.cs">
+      <DependentUpon>FoodEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\BackEnd\Foods\FoodList.aspx.cs">
       <DependentUpon>FoodList.aspx</DependentUpon>

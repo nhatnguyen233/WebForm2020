@@ -52,7 +52,9 @@
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
                             <li>Hello Admin</li>
-                            <li><a href="#">Logout</a></li>
+                            <li>
+                                <asp:Button ID="Logout" runat="server" Text="Logout" OnClick="Button1_Click" />
+                            </li>
                         </ul>
                     </div>
                 </div>

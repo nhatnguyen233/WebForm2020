@@ -2,16 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="main_body" runat="server">
     <div class="owl-carousel carousel1">
       
-          <img src="/imgs/banner1.png" alt="Mít nghệ" title="Mít nghệ" width="100%" />
+          <img src="/imgs/banner1.png" alt="Mít nghệ" title="Mít nghệ" width="100" />
      
       
-          <img src="/imgs/banner2.png" alt="Bánh bột lọc" title="Bánh bột lọc" width="100%" />
+          <img src="/imgs/banner2.png" alt="Bánh bột lọc" title="Bánh bột lọc" width="100" />
      
       
-          <img src="/imgs/banner3.png" alt="Thịt xiên nướng" title="Thịt xiên nướng" width="100%" />
+          <img src="/imgs/banner3.png" alt="Thịt xiên nướng" title="Thịt xiên nướng" width="100" />
       
       
-          <img src="/imgs/banner4.png" alt="Bánh rán mặn" title="Bánh rán mặn"  width="100%" />
+          <img src="/imgs/banner4.png" alt="Bánh rán mặn" title="Bánh rán mặn"  width="100" />
       
     </div>
     <div class="owl-carousel carousel2">
@@ -20,7 +20,7 @@
             <div class="hightlight-item">
                 <div class="image-hightlight--item">
                     <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>">
-                        <img src="<%# Eval("image") %>" alt="<%# Eval("food_name") %>" title="<%# Eval("food_name") %>" width="100%" />
+                        <img src="<%# Eval("image") %>" alt="<%# Eval("food_name") %>" title="<%# Eval("food_name") %>" width="100" />
                     </a>
                 </div>
                 <h3 class="item-name font-weight-bold">
