@@ -50,8 +50,7 @@ namespace QuaVat.Views.BackEnd.Categories
             } catch(Exception error)
             {
                 Response.Write("<script>alert('Error: " + error + "')</script>");
-            }
-            
+            }  
         }
     }
 }

@@ -44,7 +44,7 @@
 				margin-right: 5%;
 			">
 			<% for (int i=1; i<=totalPages; i++) {%>
-				<a href="?page=<%= i %>&per_page=10"><%= i %></a>
+				<a class="btn btn-small" href="?page=<%= i %>&per_page=10"><%= i %></a>
 			<% } %>
 		</div>
 	</div>

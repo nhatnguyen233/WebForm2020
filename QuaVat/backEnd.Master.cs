@@ -11,7 +11,16 @@ namespace QuaVat
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Admin"].Equals(""))
+            {
+                Response.Redirect("/Views/BackEnd/Login.aspx");
+            }
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("/Views/BackEnd/Login.aspx");
         }
     }
 }

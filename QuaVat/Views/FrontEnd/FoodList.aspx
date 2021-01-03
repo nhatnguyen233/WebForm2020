@@ -57,7 +57,7 @@
                     <tr>
                         <td>
                             <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>">
-                                <img src=" <%# Eval("image") %>" alt="<%# Eval("food_name") %>" title="<%# Eval("food_name") %>" width="100%" />
+                                <img src=" <%# Eval("image") %>" alt="<%# Eval("food_name") %>" title="<%# Eval("food_name") %>" width="100" />
                             </a>
                         </td>
                         <td>
@@ -90,7 +90,7 @@
         <div class="data-list col-md-3">
             <div class="food-item">
                 <div class="image-food--item">
-                    <img src="/imgs/banner4.png" alt="Bánh rán mặn" title="Bánh rán mặn"  width="100%" />
+                    <img src="/imgs/banner4.png" alt="Bánh rán mặn" title="Bánh rán mặn"  width="100" />
                 </div>
                 <p class="item-name font-weight-bold">Bánh rán mặn</p>
                 <div class="price-top">

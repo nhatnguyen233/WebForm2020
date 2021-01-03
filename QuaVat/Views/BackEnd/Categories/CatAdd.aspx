@@ -44,6 +44,8 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
+     <!-- Load Toastr Alert JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript"></script>
      <!-- Load TinyMCE -->
     <script src="https://cdn.tiny.cloud/1/snb2ihsmx7u8rowe7d4wve91u3h2zsudw988vzymn1m2yfs3/tinymce/5/tinymce.min.js" type="text/javascript"></script>
     <script>
@@ -51,8 +53,6 @@
             selector: '.tinymce'
         });
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             setupTinyMCE();

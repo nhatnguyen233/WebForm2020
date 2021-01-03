@@ -13,7 +13,7 @@ namespace QuaVat.Views
         FoodBUS food = new FoodBUS();
         public void HienThi()
         {
-            list1.DataSource = food.ShowAllFood();
+            list1.DataSource = food.GetAll();
             list1.DataBind();
             list2.DataSource = food.ShowFoodTop4WithCategory(1);
             list2.DataBind();

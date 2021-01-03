@@ -25,7 +25,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="main_body" runat="server">
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuaVatVietConnectionString %>" SelectCommand="SELECT [category_id], [category_name] FROM [categories]"></asp:SqlDataSource>
-    <h2>Add New Category</h2>
+    <h2>Update Category</h2>
     <div class="block copyblock">
         <table class="form">
             <tr>
