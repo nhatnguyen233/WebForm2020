@@ -597,6 +597,8 @@
     <Content Include="Views\BackEnd\Sliders\SliderAdd.aspx" />
     <Content Include="Views\BackEnd\Sliders\SliderList.aspx" />
     <Content Include="Views\BackEnd\Social.aspx" />
+    <Content Include="Views\FrontEnd\Cart.aspx" />
+    <Content Include="Views\FrontEnd\DetailFood.aspx" />
     <Content Include="Views\FrontEnd\FoodList.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Web.config" />
@@ -717,6 +719,20 @@
     </Compile>
     <Compile Include="Views\BackEnd\Social.aspx.designer.cs">
       <DependentUpon>Social.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrontEnd\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\FrontEnd\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrontEnd\DetailFood.aspx.cs">
+      <DependentUpon>DetailFood.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\FrontEnd\DetailFood.aspx.designer.cs">
+      <DependentUpon>DetailFood.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\FrontEnd\FoodList.aspx.cs">
       <DependentUpon>FoodList.aspx</DependentUpon>
