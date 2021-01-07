@@ -612,6 +612,7 @@
       <DependentUpon>backEnd.Master</DependentUpon>
     </Compile>
     <Compile Include="BUS\AdminBUS.cs" />
+    <Compile Include="BUS\CartBUS.cs" />
     <Compile Include="BUS\CategoryBUS.cs" />
     <Compile Include="BUS\FoodBUS.cs" />
     <Compile Include="DAL\Data.cs" />

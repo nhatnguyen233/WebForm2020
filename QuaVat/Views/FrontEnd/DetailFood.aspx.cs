@@ -13,18 +13,23 @@ namespace QuaVat.Views.FrontEnd
     {
         FoodBUS bus = new FoodBUS();
         DataTable data = null;
-        public static int food_id, quantity;
+        public static int food_id, quantity, soluongmua;
         public static decimal amount;
         public static string name, desc, img;
+
+        protected void SoLuongMua_Load(object sender, EventArgs e)
+        {
+            soluongmua = Convert.ToInt32(SoLuongMua.Text);
+        }
 
         protected void SoLuongMua_Init(object sender, EventArgs e)
         {
             SoLuongMua.Text = "1";
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void SoLuongMua_TextChanged(object sender, EventArgs e)
         {
-            Server.Transfer("~/Views/FrontEnd/Cart.aspx");
+            soluongmua = Convert.ToInt32(SoLuongMua.Text);
         }
 
         void LoadData()
@@ -38,13 +43,9 @@ namespace QuaVat.Views.FrontEnd
             img = data.Rows[0].Field<string>("image");
         }
 
-        protected void FoodID_Load(object sender, EventArgs e)
-        {
-            FoodID.Text = food_id.ToString();
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Write(soluongmua);
             LoadData();
         }
     }

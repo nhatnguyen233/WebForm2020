@@ -15,13 +15,13 @@ namespace QuaVat.Views.FrontEnd
     {
 
         /// <summary>
-        /// FoodID control.
+        /// FoodIDD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FoodID;
+        protected global::System.Web.UI.WebControls.HiddenField FoodIDD;
 
         /// <summary>
         /// SoLuongMua control.

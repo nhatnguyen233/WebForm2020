@@ -39,7 +39,7 @@
                     <input type="image" src="/imgs/logo1545122923_s87.png" />
                     <div class="cart-number">
                         <span>Giỏ Hàng</span>
-                        <a href="#" id="circle">0</a>
+                        <a href="/Views/FrontEnd/Cart.aspx" id="circle"><%= Session["count"] %></a>
                     </div>
                 </div>
 
