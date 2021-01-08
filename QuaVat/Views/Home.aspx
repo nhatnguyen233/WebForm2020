@@ -19,19 +19,19 @@
         <ItemTemplate>
             <div class="hightlight-item">
                 <div class="image-hightlight--item">
-                    <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>">
+                    <a href="<%# "FrontEnd/DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>">
                         <img src="<%# Eval("image") %>" alt="<%# Eval("food_name") %>" title="<%# Eval("food_name") %>" width="100" />
                     </a>
                 </div>
                 <h3 class="item-name font-weight-bold">
-                    <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" style="color: black; text-decoration: none;">
+                    <a href="<%# "FrontEnd/DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" style="color: black; text-decoration: none;">
                         <%# Eval("food_name") %>
                     </a>
                 </h3>
                 <hr />
                 <div class="price-top">
                     <h3 class="font-weight-bold text-danger"><%# String.Format("{0:#}",Eval("amount")) %>Đ</h3>
-                    <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" class="btn btn-success text-white">Chi tiết</a>
+                    <a href="<%# "FrontEnd/DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" class="btn btn-success text-white">Chi tiết</a>
                 </div>
             </div>
         </ItemTemplate>
@@ -49,19 +49,19 @@
                     <div class="col-md-3">
                         <div class="food-item">
                             <div class="image-food--item">
-                                <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>">
-                                    <img src="<%# Eval("image") %>" alt="<%# Eval("food_name") %>" title="<%# Eval("food_name") %>" width="100%" />
+                                <a href="<%# "FrontEnd/DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>">
+                                    <img src="<%# Eval("image") %>" alt="<%# Eval("food_name") %>" title="<%# Eval("food_name") %>" width="100" />
                                 </a>
                             </div>
                             <h3 class="item-name font-weight-bold">
-                                <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" style="color: black; text-decoration: none;">
+                                <a href="<%# "FrontEnd/DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" style="color: black; text-decoration: none;">
                                     <%# Eval("food_name") %>
                                 </a>
                             </h3>
                             <hr />
                             <div class="price-top">
                                  <h3 class="font-weight-bold text-danger"><%# String.Format("{0:#}",Eval("amount")) %>Đ</h3>
-                                <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" class="btn btn-danger text-white">Chi tiết</a>
+                                <a href="<%# "FrontEnd/DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" class="btn btn-danger text-white">Chi tiết</a>
                             </div>
                         </div>
                     </div> 
@@ -81,19 +81,19 @@
                     <div class="col-md-3">
                         <div class="food-item">
                             <div class="image-food--item">
-                                <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>">
+                                <a href="<%# "FrontEnd/DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>">
                                     <img src="<%# Eval("image") %>" alt="<%# Eval("food_name") %>" title="<%# Eval("food_name") %>" width="100%" />
                                 </a>
                             </div>
                             <h3 class="item-name font-weight-bold">
-                                <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" style="color: black; text-decoration: none;">
+                                <a href="<%# "FrontEnd/DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" style="color: black; text-decoration: none;">
                                     <%# Eval("food_name") %>
                                 </a>
                             </h3>
                             <hr />
                             <div class="price-top">
                                  <h3 class="font-weight-bold text-danger"><%# String.Format("{0:#}",Eval("amount")) %>Đ</h3>
-                                <a href="<%# "DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" class="btn btn-danger text-white">Chi tiết</a>
+                                <a href="<%# "FrontEnd/DetailFood.aspx?food_id=" + Eval("food_id").ToString() %>" class="btn btn-danger text-white">Chi tiết</a>
                             </div>
                         </div>
                     </div> 

@@ -18,6 +18,8 @@ namespace QuaVat
         protected void Session_Start(object sender, EventArgs e)
         {
             Session["Admin"] = "";
+            Session["sId"] = "";
+            Session["count"] = "0";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

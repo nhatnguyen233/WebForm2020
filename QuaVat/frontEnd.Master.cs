@@ -11,7 +11,7 @@ namespace QuaVat
     public partial class frontEnd : System.Web.UI.MasterPage
     {
         CategoryBUS category = new CategoryBUS();
-
+        CartBUS cart = new CartBUS();
         public void HienThi()
         {
             categoryMain.DataSource = category.ShowMainCategory();
@@ -20,6 +20,10 @@ namespace QuaVat
         protected void Page_Load(object sender, EventArgs e)
         {
             HienThi();
+            if(Session["sId"] == null)
+            {
+                cart.DeleteAllCart();
+            }    
         }
     }
 }
